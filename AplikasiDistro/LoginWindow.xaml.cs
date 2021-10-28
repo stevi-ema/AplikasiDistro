@@ -71,10 +71,10 @@ namespace AplikasiDistro
             }
             else
             {
-                MainWindow main = new MainWindow();
-                main.Show();
-                this.Close();
-            }
+            MainWindow main = new MainWindow();
+            main.Show();
+            this.Close();
+        }
 
             mySql.Close();
         }
