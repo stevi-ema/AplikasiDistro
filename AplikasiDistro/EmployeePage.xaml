@@ -9,6 +9,185 @@
       Title="EmployeePage">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
+            <RowDefinition/>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Label Content="Employee Data"
+               FontSize="18" FontWeight="Bold"
+               Foreground="White"/>
+
+        <StackPanel Grid.Row="1" Margin="10">
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel>
+                    <Label Content="ID Employee" 
+                        Foreground="White"/>
+                    <TextBox x:Name="txtId" Width="100"
+                             HorizontalAlignment="Left"
+                             Margin="5,0,0,5"/>
+
+                    <Label Content="Name" 
+                        Foreground="White"/>
+                    <TextBox x:Name="txtNama" Width="250"
+                             HorizontalAlignment="Left"
+                             Margin="5,0,0,5"/>
+
+                    <Label Content="Sex" 
+                        Foreground="White"/>
+                    <StackPanel Orientation="Horizontal"
+                        Margin="0,0,0,5">
+
+                        <RadioButton x:Name="rdbMale"
+                             Content="Male"
+                             Foreground="White"
+                             Margin="5"
+                             Width="75"
+                             IsChecked="True"/>
+
+                        <RadioButton x:Name="rdbFemale"
+                             Content="Female"
+                             Foreground="White"
+                             Margin="5"
+                             Width="75"/>
+
+                    </StackPanel>
+
+                    <Label Content="BirthDate" 
+                           Foreground="White"/>
+
+                    <DatePicker x:Name="dtpBirthdate"
+                        Margin="5,0,5,0"
+                        BorderThickness="0"
+                        Height="25"
+                        Width="150"
+                        HorizontalAlignment="Left"/>
+
+                </StackPanel>
+
+                <StackPanel Grid.Column="1">
+
+                    <Label Content="Email" 
+                           Foreground="White"/>
+                    <TextBox x:Name="txtEmail" Width="280"
+                             HorizontalAlignment="Left"
+                             Margin="5,0,0,5"/>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel>
+                            <Label Content="Department" 
+                           Foreground="White"/>
+                            <TextBox x:Name="txtDepartment" 
+                             Width="150"
+                             HorizontalAlignment="Left"
+                             Margin="5,0,0,5"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="1">
+                            <Label Content="HP" 
+                           Foreground="White"/>
+                            <TextBox x:Name="txtHP" 
+                             Width="150"
+                             HorizontalAlignment="Left"
+                             Margin="5,0,0,5"/>
+                        </StackPanel>
+                    </Grid>
+
+                    <Label Content="Username" 
+                           Foreground="White"/>
+                    <TextBox x:Name="txtUsername" 
+                             Width="200"
+                             HorizontalAlignment="Left"
+                             Margin="5,0,0,5"/>
+
+                    <Label Content="Password" 
+                           Foreground="White"/>
+                    <TextBox x:Name="txtPassword" 
+                             Width="200"
+                             HorizontalAlignment="Left"
+                             Margin="5,0,0,5"/>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Border Height="25" Width="90" Background="#5bc3ff"
+                    CornerRadius="10"
+                    Style="{DynamicResource BorderHover}">
+                <Button x:Name="btnAdd" Content="Add"
+                    Height="25" Width="80"
+                    Background="Transparent"
+                        FontWeight="Bold"
+                        BorderThickness="0"/>
+            </Border>
+
+            <Border Height="25" Width="90" Background="#5bc3ff"
+                    CornerRadius="10" Grid.Column="1"
+                    Style="{DynamicResource BorderHover}">
+                <Button x:Name="btnEdit" Content="Edit"
+                    Height="25" Width="80"
+                    Background="Transparent"
+                        FontWeight="Bold"
+                        BorderThickness="0"/>
+            </Border>
+
+                <Border Height="25" Width="90" Background="#5bc3ff"
+                    CornerRadius="10" Grid.Column="2"
+                    Style="{DynamicResource BorderHover}">
+                <Button x:Name="btnSave" Content="Save"
+                    Height="25" Width="80"
+                    Background="Transparent"
+                        FontWeight="Bold"
+                        BorderThickness="0"/>
+            </Border>
+
+            <Border Height="25" Width="90" Background="#5bc3ff"
+                    CornerRadius="10" Grid.Column="3"
+                    Style="{DynamicResource BorderHover}">
+                <Button x:Name="btnDelete" Content="Delete"
+                    Height="25" Width="80"
+                    Background="Transparent"
+                        FontWeight="Bold"
+                        BorderThickness="0"/>
+            </Border>
+
+            <Border Height="25" Width="90" Background="#5bc3ff"
+                    CornerRadius="10" Grid.Column="4"
+                    Style="{DynamicResource BorderHover}">
+                <Button x:Name="btnClose" Content="Close"
+                    Height="25" Width="80"
+                    Background="Transparent"
+                        FontWeight="Bold"
+                        BorderThickness="0"/>
+            </Border>
+        </Grid>
+        <Border Grid.Row="3" Margin="5" CornerRadius="10"
+                Background="White">
+            <DataGrid x:Name="dgKaryawan"
+                  Margin="10" Background="Transparent"
+                      BorderThickness="0"/>
+        </Border>
         
     </Grid>
 </Page>

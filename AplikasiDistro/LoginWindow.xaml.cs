@@ -48,6 +48,16 @@ namespace AplikasiDistro
             //result
             MySqlDataReader dataReader = command.ExecuteReader();
 
+            id = "";
+            nama = "";
+            jk = "";
+            tglLahir = "";
+            email = "";
+            jabatan = "";
+            hp = "";
+            username = "";
+            password = "";
+
             //check
             while (dataReader.Read())
             {
@@ -62,19 +72,19 @@ namespace AplikasiDistro
                 password = dataReader.GetString(8);
             }
 
-            if (nama == "")
+            if (nama != "")
+            {
+                MainWindow main = new MainWindow();
+                main.Show();
+                this.Close();
+            }
+            else
             {
                 MessageBox.Show("Username/Password salah !");
                 txtUsername.Text = "";
                 txtPassword.Password = "";
                 txtUsername.Focus();
             }
-            else
-            {
-            MainWindow main = new MainWindow();
-            main.Show();
-            this.Close();
-        }
 
             mySql.Close();
         }

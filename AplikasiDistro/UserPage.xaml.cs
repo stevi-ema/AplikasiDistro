@@ -10,6 +10,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace AplikasiDistro
 {
@@ -18,9 +20,15 @@ namespace AplikasiDistro
     /// </summary>
     public partial class UserPage : Page
     {
+        //declare object untuk koneksi database
+        private MySqlConnection mySql;
+
         public UserPage()
         {
             InitializeComponent();
+
+            //get koneksi
+            mySql = Koneksi.GetConnection();
 
             //get data user yg login
             lblID.Content = LoginWindow.id;
@@ -41,6 +49,11 @@ namespace AplikasiDistro
             txtHP.Text = LoginWindow.hp;
             txtUsername.Text = LoginWindow.username;
             txtPassword.Text = LoginWindow.password;
+        }
+
+        private void btnUpdateEmployee_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            
         }
     }
 }

@@ -7,7 +7,43 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\001shirt.jpg" />
+    <None Remove="Images\hat.png" />
+    <None Remove="Images\jacket.png" />
+    <None Remove="Images\long-pants.png" />
+    <None Remove="Images\person.png" />
+    <None Remove="Images\shirt.png" />
+    <None Remove="Images\shortpants.png" />
+    <None Remove="Images\tshirt.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MySql.Data" Version="8.0.27" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\001shirt.jpg" />
+    <Resource Include="Images\hat.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\jacket.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\long-pants.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\person.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\shirt.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\shortpants.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\tshirt.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>
